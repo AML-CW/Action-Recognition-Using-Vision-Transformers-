@@ -1,0 +1,7 @@
+2025-05-09 15:37:35,110 - INFO - Using device: cuda
+2025-05-09 15:37:36,007 - ERROR - Model file timesformer_model.pth not found. Using pre-trained model without weights.
+2025-05-09 15:38:08,081 - INFO - Using device: cuda
+2025-05-09 15:38:13,720 - INFO - Loaded model weights from timesformer_model.pth
+2025-05-09 15:40:02,234 - INFO - Using device: cuda
+2025-05-09 15:40:03,650 - INFO - Loaded model weights from timesformer_model.pth
+2025-05-09 15:40:05,485 - INFO - Test loader size: 125 samples

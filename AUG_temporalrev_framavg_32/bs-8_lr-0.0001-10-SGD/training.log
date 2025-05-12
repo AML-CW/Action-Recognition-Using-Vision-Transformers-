@@ -1,0 +1,31 @@
+2025-05-09 16:27:05,749 - INFO - Batch Size: 8, Learning Rate:0.0001, No. of Epochs:10, Optimizer: SGD, Loss Function: Cross Entropy
+2025-05-09 16:27:07,970 - INFO - Epoch 1/10, Batch 1: Batch size: 8, Input shape: torch.Size([8, 8, 3, 224, 224])
+2025-05-09 16:28:19,672 - INFO - Epoch 1/10, Loss: 2.773072265625
+2025-05-09 16:28:28,308 - INFO - Epoch 1/10, Train Loss: 2.7731, Val Loss: 2.1675, Val Accuracy: 0.5952
+2025-05-09 16:28:28,402 - INFO - Epoch 2/10, Batch 1: Batch size: 8, Input shape: torch.Size([8, 8, 3, 224, 224])
+2025-05-09 16:29:39,093 - INFO - Epoch 2/10, Loss: 1.8043473072052
+2025-05-09 16:29:47,881 - INFO - Epoch 2/10, Train Loss: 1.8043, Val Loss: 1.4682, Val Accuracy: 0.7698
+2025-05-09 16:29:48,084 - INFO - Epoch 3/10, Batch 1: Batch size: 8, Input shape: torch.Size([8, 8, 3, 224, 224])
+2025-05-09 16:31:01,496 - INFO - Epoch 3/10, Loss: 1.2319120397567749
+2025-05-09 16:31:10,248 - INFO - Epoch 3/10, Train Loss: 1.2319, Val Loss: 1.0972, Val Accuracy: 0.8333
+2025-05-09 16:31:10,337 - INFO - Epoch 4/10, Batch 1: Batch size: 8, Input shape: torch.Size([8, 8, 3, 224, 224])
+2025-05-09 16:32:21,208 - INFO - Epoch 4/10, Loss: 0.9156122608184815
+2025-05-09 16:32:29,952 - INFO - Epoch 4/10, Train Loss: 0.9156, Val Loss: 0.8941, Val Accuracy: 0.8492
+2025-05-09 16:32:30,041 - INFO - Epoch 5/10, Batch 1: Batch size: 8, Input shape: torch.Size([8, 8, 3, 224, 224])
+2025-05-09 16:33:40,688 - INFO - Epoch 5/10, Loss: 0.7226293988227844
+2025-05-09 16:33:49,525 - INFO - Epoch 5/10, Train Loss: 0.7226, Val Loss: 0.7687, Val Accuracy: 0.8651
+2025-05-09 16:33:49,618 - INFO - Epoch 6/10, Batch 1: Batch size: 8, Input shape: torch.Size([8, 8, 3, 224, 224])
+2025-05-09 16:35:00,493 - INFO - Epoch 6/10, Loss: 0.5917922887802124
+2025-05-09 16:35:09,283 - INFO - Epoch 6/10, Train Loss: 0.5918, Val Loss: 0.6870, Val Accuracy: 0.8889
+2025-05-09 16:35:09,375 - INFO - Epoch 7/10, Batch 1: Batch size: 8, Input shape: torch.Size([8, 8, 3, 224, 224])
+2025-05-09 16:36:19,885 - INFO - Epoch 7/10, Loss: 0.4962177386283875
+2025-05-09 16:36:28,703 - INFO - Epoch 7/10, Train Loss: 0.4962, Val Loss: 0.6283, Val Accuracy: 0.9048
+2025-05-09 16:36:28,791 - INFO - Epoch 8/10, Batch 1: Batch size: 8, Input shape: torch.Size([8, 8, 3, 224, 224])
+2025-05-09 16:37:39,925 - INFO - Epoch 8/10, Loss: 0.42114124846458434
+2025-05-09 16:37:48,863 - INFO - Epoch 8/10, Train Loss: 0.4211, Val Loss: 0.5866, Val Accuracy: 0.9048
+2025-05-09 16:37:48,966 - INFO - Epoch 9/10, Batch 1: Batch size: 8, Input shape: torch.Size([8, 8, 3, 224, 224])
+2025-05-09 16:39:01,759 - INFO - Epoch 9/10, Loss: 0.36192688632011416
+2025-05-09 16:39:10,542 - INFO - Epoch 9/10, Train Loss: 0.3619, Val Loss: 0.5529, Val Accuracy: 0.9127
+2025-05-09 16:39:10,629 - INFO - Epoch 10/10, Batch 1: Batch size: 8, Input shape: torch.Size([8, 8, 3, 224, 224])
+2025-05-09 16:40:21,217 - INFO - Epoch 10/10, Loss: 0.3131321073770523
+2025-05-09 16:40:30,219 - INFO - Epoch 10/10, Train Loss: 0.3131, Val Loss: 0.5290, Val Accuracy: 0.9048
