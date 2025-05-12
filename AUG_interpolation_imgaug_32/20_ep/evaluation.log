@@ -1,0 +1,168 @@
+2025-05-12 16:15:17,782 - INFO - Using device: cuda
+2025-05-12 16:15:18,815 - INFO - Test loader size: 125 samples
+2025-05-12 16:15:24,570 - INFO - Raw logits shape: torch.Size([8, 25])
+2025-05-12 16:15:25,111 - INFO - Raw logits shape: torch.Size([8, 25])
+2025-05-12 16:15:25,693 - INFO - Raw logits shape: torch.Size([8, 25])
+2025-05-12 16:15:26,261 - INFO - Raw logits shape: torch.Size([8, 25])
+2025-05-12 16:15:26,838 - INFO - Raw logits shape: torch.Size([8, 25])
+2025-05-12 16:15:27,416 - INFO - Raw logits shape: torch.Size([8, 25])
+2025-05-12 16:15:28,007 - INFO - Raw logits shape: torch.Size([8, 25])
+2025-05-12 16:15:28,588 - INFO - Raw logits shape: torch.Size([8, 25])
+2025-05-12 16:15:29,166 - INFO - Raw logits shape: torch.Size([8, 25])
+2025-05-12 16:15:29,746 - INFO - Raw logits shape: torch.Size([8, 25])
+2025-05-12 16:15:30,331 - INFO - Raw logits shape: torch.Size([8, 25])
+2025-05-12 16:15:30,907 - INFO - Raw logits shape: torch.Size([8, 25])
+2025-05-12 16:15:31,490 - INFO - Raw logits shape: torch.Size([8, 25])
+2025-05-12 16:15:32,080 - INFO - Raw logits shape: torch.Size([8, 25])
+2025-05-12 16:15:32,675 - INFO - Raw logits shape: torch.Size([8, 25])
+2025-05-12 16:15:33,215 - INFO - Raw logits shape: torch.Size([5, 25])
+2025-05-12 16:15:33,497 - INFO - Test ground truth labels (y_true) range: 0 to 24
+2025-05-12 16:15:33,497 - INFO - Test ground truth labels (y_true): [11 18 23 22 17  7 17 14 21 10 24  4  9  7 15  0  5 19 11 18 13  7  9 11
+ 18 13 10 12 11 19  4  8  5 16  9  5  3  7  0 19  8  3 23  5  9 16 21 12
+ 20 19  1 22 14  9  2 24 16 20  6 12  0 10 14  3  4 14 21  8 15 17 12 20
+  3 24  6 17  6  2 11  8 16 15 17 13 22  1  2 20 24  8  0 23 19 23 12 23
+ 18  7  6 10 20 22  4  1 21  3 24 16 22  0 18 13  6  4  2 14  2 10  1 15
+ 13  1 15  5 21]
+2025-05-12 16:15:33,497 - INFO - Test predicted labels (y_pred) range: 0 to 24
+2025-05-12 16:15:33,497 - INFO - Test predicted labels (y_pred): [23 18 18 22 17  7 17 14 21 10 24  4 11  7 15  0  5 19 11 18 13  7  9 11
+ 18 13 10 12 11 19  4  8  5 16  1  5 22  7  0 19  8  3 23  5  9 16 21 12
+ 20 19  1 22 14 11  2 24 16 20  6 12  0 10 14  3  4 14 21  8 15 17 12 20
+  3 21  6 17  8  2 11  8 16 15 17 13  5  1  2 20  8  8  0 23 19 23 12 23
+ 18  7 24 10 20 22  4  1  3  3 24 16 22  0 23 13  6  4  2 14  2 10  9 15
+ 13  1 15  5 21]
+2025-05-12 16:15:33,497 - INFO - Test Top-1 Accuracy: 88.80%
+2025-05-12 16:15:33,498 - INFO - Test Top-5 Accuracy: 96.80% (121/125 samples)
+2025-05-12 16:15:33,954 - INFO - Precision and Recall per Class (Table):
++--------------+---------------+-------------+----------+
+| Class Name   |   Class Index |   Precision |   Recall |
++==============+===============+=============+==========+
+| brush_hair   |             0 |      1      |      1   |
++--------------+---------------+-------------+----------+
+| cartwheel    |             1 |      0.8    |      0.8 |
++--------------+---------------+-------------+----------+
+| catch        |             2 |      1      |      1   |
++--------------+---------------+-------------+----------+
+| chew         |             3 |      0.8    |      0.8 |
++--------------+---------------+-------------+----------+
+| climb        |             4 |      1      |      1   |
++--------------+---------------+-------------+----------+
+| climb_stairs |             5 |      0.8333 |      1   |
++--------------+---------------+-------------+----------+
+| draw_sword   |             6 |      1      |      0.6 |
++--------------+---------------+-------------+----------+
+| eat          |             7 |      1      |      1   |
++--------------+---------------+-------------+----------+
+| fencing      |             8 |      0.7143 |      1   |
++--------------+---------------+-------------+----------+
+| flic_flac    |             9 |      0.6667 |      0.4 |
++--------------+---------------+-------------+----------+
+| golf         |            10 |      1      |      1   |
++--------------+---------------+-------------+----------+
+| handstand    |            11 |      0.6667 |      0.8 |
++--------------+---------------+-------------+----------+
+| kiss         |            12 |      1      |      1   |
++--------------+---------------+-------------+----------+
+| pick         |            13 |      1      |      1   |
++--------------+---------------+-------------+----------+
+| pour         |            14 |      1      |      1   |
++--------------+---------------+-------------+----------+
+| pullup       |            15 |      1      |      1   |
++--------------+---------------+-------------+----------+
+| pushup       |            16 |      1      |      1   |
++--------------+---------------+-------------+----------+
+| ride_bike    |            17 |      1      |      1   |
++--------------+---------------+-------------+----------+
+| shoot_bow    |            18 |      0.8    |      0.8 |
++--------------+---------------+-------------+----------+
+| shoot_gun    |            19 |      1      |      1   |
++--------------+---------------+-------------+----------+
+| situp        |            20 |      1      |      1   |
++--------------+---------------+-------------+----------+
+| smile        |            21 |      0.8    |      0.8 |
++--------------+---------------+-------------+----------+
+| smoke        |            22 |      0.8    |      0.8 |
++--------------+---------------+-------------+----------+
+| throw        |            23 |      0.6667 |      0.8 |
++--------------+---------------+-------------+----------+
+| wave         |            24 |      0.75   |      0.6 |
++--------------+---------------+-------------+----------+
+2025-05-12 16:15:34,119 - INFO - 
+Correctly Classified Samples:
+
+Sample 1 (Index: 91):
+Actual Class: throw
+Predicted Class: throw
+Top-5 Predictions:
+  1. throw: 99.85%
+  2. wave: 0.04%
+  3. pick: 0.03%
+  4. pour: 0.01%
+  5. shoot_gun: 0.01%
+
+Sample 2 (Index: 107):
+Actual Class: pushup
+Predicted Class: pushup
+Top-5 Predictions:
+  1. pushup: 98.47%
+  2. climb_stairs: 0.36%
+  3. situp: 0.28%
+  4. cartwheel: 0.26%
+  5. pick: 0.11%
+
+Sample 3 (Index: 103):
+Actual Class: cartwheel
+Predicted Class: cartwheel
+Top-5 Predictions:
+  1. cartwheel: 95.03%
+  2. flic_flac: 4.37%
+  3. handstand: 0.29%
+  4. throw: 0.08%
+  5. catch: 0.03%
+
+2025-05-12 16:15:34,119 - INFO - 
+Incorrectly Classified Samples:
+
+Sample 1 (Index: 0):
+Actual Class: handstand
+Predicted Class: throw
+Top-5 Predictions:
+  1. throw: 28.17%
+  2. handstand: 26.52%
+  3. pick: 15.68%
+  4. climb: 5.05%
+  5. pullup: 4.49%
+
+Sample 2 (Index: 98):
+Actual Class: draw_sword
+Predicted Class: wave
+Top-5 Predictions:
+  1. wave: 88.08%
+  2. pick: 2.69%
+  3. throw: 2.27%
+  4. climb: 0.88%
+  5. shoot_gun: 0.88%
+
+Sample 3 (Index: 73):
+Actual Class: wave
+Predicted Class: smile
+Top-5 Predictions:
+  1. smile: 65.54%
+  2. wave: 17.36%
+  3. chew: 12.22%
+  4. smoke: 2.57%
+  5. brush_hair: 0.64%
+
+2025-05-12 16:15:34,119 - INFO - 
+Insights into Model Learning:
+- Correct Predictions:
+  - For video 91 (actual: throw), the model correctly predicted with high confidence (99.85%). Top-5 classes (throw, wave, pick, pour, shoot_gun) are semantically similar, indicating the model has learned meaningful action features.
+  - For video 107 (actual: pushup), the model correctly predicted with high confidence (98.47%). Top-5 classes (pushup, climb_stairs, situp, cartwheel, pick) are semantically similar, indicating the model has learned meaningful action features.
+  - For video 103 (actual: cartwheel), the model correctly predicted with high confidence (95.03%). Top-5 classes (cartwheel, flic_flac, handstand, throw, catch) are semantically similar, indicating the model has learned meaningful action features.
+- Incorrect Predictions:
+  - For video 0 (actual: handstand, predicted: throw), the model was incorrect. The actual class is in the top-5 (throw, handstand, pick, climb, pullup), suggesting uncertainty possibly due to visual similarity.
+  - For video 98 (actual: draw_sword, predicted: wave), the model was incorrect. The actual class is not in the top-5 (wave, pick, throw, climb, shoot_gun), indicating the model struggles with this action, possibly due to insufficient training data or visual ambiguity.
+  - For video 73 (actual: wave, predicted: smile), the model was incorrect. The actual class is in the top-5 (smile, wave, chew, smoke, brush_hair), suggesting uncertainty possibly due to visual similarity.
+- General Observations:
+  - Top-5 accuracy (96.80%) suggests the model often ranks the correct class highly, even when top-1 predictions fail.
+  - Classes with low precision or recall (e.g., from the table above) may indicate class imbalance or difficulty distinguishing certain actions.
+
