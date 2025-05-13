@@ -95,7 +95,7 @@ The project includes a Streamlit-based web application for uploading videos and 
    streamlit run src/web/app.py
    ```
 
-3. Open the URL provided in the terminal (e.g., `http://localhost:8501`) in your web browser.
+3. Open the URL : https://action-recognition-using-vit.streamlit.app/
 
 ---
 
@@ -145,14 +145,12 @@ The project includes a Streamlit-based web application for uploading videos and 
 
 ## Screenshots
 
-### Upload Video
-![Upload Video](screenshots/upload_video.png)
-
 ### Predicted Action
-![Predicted Action](screenshots/predicted_action.png)
+![app1](https://github.com/user-attachments/assets/65a50e18-55ba-40c9-a15f-00d6c9e94a55)
+
 
 ### Grad-CAM Heatmaps
-![Grad-CAM Heatmaps](screenshots/gradcam_heatmaps.png)
+![Screenshot 2025-05-13 121408](https://github.com/user-attachments/assets/6c066c10-0226-4721-adf4-c2654b418fdb)
 
 ---
 
