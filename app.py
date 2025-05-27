@@ -1,14 +1,14 @@
 import streamlit as st
 import torch
-import numpy as np  # Corrected import statement
+import numpy as np
 import os
 import cv2
 import tempfile
 import pandas as pd
 import altair as alt
-import re  # Import the re module for regular expressions
-from transformers import AutoFeatureExtractor, AutoModelForVideoClassification
-import matplotlib.pyplot as plt  # Import matplotlib for plotting
+import re
+from transformers import AutoProcessor, AutoModelForVideoClassification
+import matplotlib.pyplot as plt
 
 # Set page configuration
 st.set_page_config(layout="wide", page_title="Action Recognition")
@@ -28,10 +28,10 @@ with st.sidebar.expander("ℹ️ Video Guidelines"):
 @st.cache_resource
 def load_model():
     model = AutoModelForVideoClassification.from_pretrained("facebook/timesformer-base-finetuned-k400")
-    extractor = AutoFeatureExtractor.from_pretrained("facebook/timesformer-base-finetuned-k400")
-    return model, extractor
+    processor = AutoProcessor.from_pretrained("facebook/timesformer-base-finetuned-k400")
+    return model, processor
 
-model, extractor = load_model()
+model, processor = load_model()
 model.eval()
 
 # Function to extract frames from a video
@@ -42,7 +42,7 @@ def extract_frames_from_video(video_path, output_folder, num_frames=8):
 
     frame_count = 0
     saved_frames = 0
-    while cap.isOpened() and saved_frames < num_frames:  # Corrected method name
+    while cap.isOpened() and saved_frames < num_frames:
         ret, frame = cap.read()
         if not ret:
             break
@@ -95,7 +95,8 @@ if uploaded_file:
         if len(frames) < 8:
             st.warning("The video must contain enough frames to extract 8 frames.")
         else:
-            inputs = extractor([frames], return_tensors="pt")
+            # Use processor instead of extractor
+            inputs = processor([frames], return_tensors="pt")
 
             with torch.no_grad():
                 outputs = model(**inputs)
@@ -121,13 +122,10 @@ if uploaded_file:
             for idx, frame in enumerate(frames):
                 # Create a random heatmap for demonstration purposes
                 heatmap = np.zeros((224, 224), dtype=np.uint8)
-
-                # Highlight a specific region in each frame (e.g., a moving region)
-                center_x, center_y = 112 + (idx * 10) % 50, 112 + (idx * 10) % 50  # Varying center for each frame
-                cv2.circle(heatmap, (center_x, center_y), 50, (255), -1)  # Draw a filled circle
-
-                heatmap = cv2.applyColorMap(heatmap, cv2.COLORMAP_JET)  # Use COLORMAP_JET for vibrant colors
-                overlay = cv2.addWeighted(frame, 0.6, heatmap, 0.4, 0)  # Overlay the heatmap on the frame
+                center_x, center_y = 112 + (idx * 10) % 50, 112 + (idx * 10) % 50
+                cv2.circle(heatmap, (center_x, center_y), 50, (255), -1)
+                heatmap = cv2.applyColorMap(heatmap, cv2.COLORMAP_JET)
+                overlay = cv2.addWeighted(frame, 0.6, heatmap, 0.4, 0)
                 heatmaps.append(overlay)
 
             # Display the frames and heatmaps
