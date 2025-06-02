@@ -24,15 +24,25 @@ with st.sidebar.expander("ℹ️ Video Guidelines"):
     - Ensure the video contains clear actions for better predictions
     """)
 
-# Load model
+def download_model_if_needed(save_path):
+    if not os.path.exists(save_path):
+        st.info("Downloading model from Google Drive...")
+        # This is your actual shared model file ID from Google Drive
+        file_id = "1yegsjiRVRtXpLfaIpisNPSX6B931sbTG"
+        url = f"https://drive.google.com/uc?id={file_id}"
+        gdown.download(url, save_path, quiet=False)
+        st.success("✅ Model downloaded successfully!")
+
 @st.cache_resource
 def load_model():
-    model = AutoModelForVideoClassification.from_pretrained("facebook/timesformer-base-finetuned-k400")
-    processor = AutoProcessor.from_pretrained("facebook/timesformer-base-finetuned-k400")
-    return model, processor
+    model_path = "timesformer_model.pth"
+    download_model_if_needed(model_path)
 
-model, processor = load_model()
-model.eval()
+    model = AutoModelForVideoClassification.from_pretrained("facebook/timesformer-base-finetuned-k400")
+    model.classifier = torch.nn.Linear(model.config.hidden_size, 25)  # adjust to match your dataset class count
+    model.load_state_dict(torch.load(model_path, map_location=torch.device("cpu")))
+    extractor = AutoFeatureExtractor.from_pretrained("facebook/timesformer-base-finetuned-k400")
+    return model, extractor
 
 # Function to extract frames from a video
 def extract_frames_from_video(video_path, output_folder, num_frames=8):
